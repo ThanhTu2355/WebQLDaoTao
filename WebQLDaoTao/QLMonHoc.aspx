@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="QLMonHoc.aspx.cs" Inherits="WebQLDaoTao.QLMonHoc" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="contents\pagination.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" runat="server">
     <p>Trang Quản lý môn học</p>
@@ -51,7 +52,8 @@
             OnRowCancelingEdit="gvMonHoc_RowCancelingEdit"
             OnRowUpdating="gvMonHoc_RowUpdating"
             OnRowDeleting="gvMonHoc_RowDeleting"
-            DataKeyNames="MaMH">
+            DataKeyNames="MaMH"
+            AllowPaging="true" PageSize="5" OnPageIndexChanging="gvMonHoc_PageIndexChanging">
             <Columns>
                 <asp:BoundField DataField="MaMH" HeaderText="Mã môn học" ReadOnly="true" />
                 <asp:BoundField DataField="TenMH" HeaderText="Tên môn học" />
@@ -60,6 +62,7 @@
                     ShowDeleteButton="true" DeleteText="Xóa" />
             </Columns>
             <HeaderStyle BackColor="#003399" ForeColor="#ffffff" />
+            <PagerStyle HorizontalAlign="Center" CssClass="pagination-ys" />
         </asp:GridView>
     </div>
 </asp:Content>

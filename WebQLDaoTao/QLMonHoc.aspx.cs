@@ -88,5 +88,11 @@ namespace WebQLDaoTao
             //load lại dữ liệu
             LienKetDuLieu();
         }
+
+        protected void gvMonHoc_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvMonHoc.PageIndex = e.NewPageIndex;
+            LienKetDuLieu();
+        }
     }
 }
