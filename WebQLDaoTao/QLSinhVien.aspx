@@ -12,7 +12,7 @@
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
-            <!-- Modal content-->
+            <!-- Modal content--> 
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -88,10 +88,27 @@
                 <asp:BoundField DataField="HoSV" HeaderText="Họ SV" ControlStyle-Width="120px"></asp:BoundField>
                 <asp:BoundField DataField="TenSV" HeaderText="Tên SV" ControlStyle-Width="60px"></asp:BoundField>
                 <asp:CheckBoxField DataField="GioiTinh" HeaderText="Giới Tính"></asp:CheckBoxField>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <%# Convert.ToBoolean(Eval("gioitinh")) ? "Nam" : "Nữ" %>
+                    </ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:CheckBox ID="ckPhai" runat="server"/>
+                    </EditItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="NgaySinh" HeaderText="Ngày Sinh" ControlStyle-Width="80px" DataFormatString="{0: dd/MM/yyyy}"></asp:BoundField>
                 <asp:BoundField DataField="NoiSinh" HeaderText="Nơi Sinh" ControlStyle-Width="80px"></asp:BoundField>
                 <asp:BoundField DataField="DiaChi" HeaderText="Địa Chỉ"></asp:BoundField>
-                <asp:BoundField DataField="MaKH" HeaderText="Khoa" ControlStyle-Width="30px"></asp:BoundField>
+                <asp:TemplateField HeaderText="Khoa">
+                    <ItemTemplate>
+                        <%# Eval("MaKH") %>
+                    </ItemTemplate>
+                    <EditItemTemplate>
+                        <asp:DropDownList ID="ddlMaKhoa" DataSourceID="odsKhoa" DataTextField="TenKH"
+                                          DataValueField="MaKH" SelectedValue='<%#Bind("makh") %>' runat="server">
+                        </asp:DropDownList>
+                    </EditItemTemplate>
+                </asp:TemplateField>
                 <asp:CommandField ShowEditButton="true" ShowDeleteButton="true" ItemStyle-Wrap="false" ButtonType="Button" />
             </Columns>
             <PagerStyle CssClass="pagination-ys" HorizontalAlign="Center" />

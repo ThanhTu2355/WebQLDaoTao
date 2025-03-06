@@ -65,7 +65,7 @@
                             <li><a href="QLSinhVien.aspx">Sinh viên</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Quản lý điểm thi</a></li>
+                    <li><a href="QLNhapDiem.aspx">Quản lý điểm thi</a></li>
                 </ul>
             </div>
         </nav>
@@ -82,7 +82,7 @@
                         <a href="QLKhoa.aspx" class="list-group-item"><span class="glyphicon glyphicon-book"></span>Quản lý khoa</a>
 
                         <a href="QLSinhVien.aspx" class="list-group-item"><span class="glyphicon glyphicon-user"></span>Quản lý sinh viên</a>
-                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-pencil"></span>Quản lý điểm</a>
+                        <a href="QLNhapDiem.aspx" class="list-group-item"><span class="glyphicon glyphicon-pencil"></span>Quản lý điểm</a>
                     </div>
                 </div>
 

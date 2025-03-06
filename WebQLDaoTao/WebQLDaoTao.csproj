@@ -72,6 +72,7 @@
     <Content Include="Global.asax" />
     <Content Include="QLKhoa.aspx" />
     <Content Include="QLMonHoc.aspx" />
+    <Content Include="QLNhapDiem.aspx" />
     <Content Include="QLSinhVien.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -86,6 +87,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\KetQua.cs" />
+    <Compile Include="Models\KetQuaDAO.cs" />
     <Compile Include="Models\Khoa.cs" />
     <Compile Include="Models\KhoaDAO.cs" />
     <Compile Include="Models\MonHoc.cs" />
@@ -106,6 +109,13 @@
     </Compile>
     <Compile Include="QLMonHoc.aspx.designer.cs">
       <DependentUpon>QLMonHoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QLNhapDiem.aspx.cs">
+      <DependentUpon>QLNhapDiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QLNhapDiem.aspx.designer.cs">
+      <DependentUpon>QLNhapDiem.aspx</DependentUpon>
     </Compile>
     <Compile Include="QLSinhVien.aspx.cs">
       <DependentUpon>QLSinhVien.aspx</DependentUpon>
