@@ -70,6 +70,8 @@
     <Content Include="Contents\pagination.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="QLKhoa.aspx" />
     <Content Include="QLMonHoc.aspx" />
     <Content Include="QLNhapDiem.aspx" />
@@ -87,6 +89,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\KetQua.cs" />
     <Compile Include="Models\KetQuaDAO.cs" />
     <Compile Include="Models\Khoa.cs" />
@@ -95,6 +111,7 @@
     <Compile Include="Models\MonHocDAO.cs" />
     <Compile Include="Models\SinhVien.cs" />
     <Compile Include="Models\SinhVienDAO.cs" />
+    <Compile Include="Models\UserDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLKhoa.aspx.cs">
       <DependentUpon>QLKhoa.aspx</DependentUpon>

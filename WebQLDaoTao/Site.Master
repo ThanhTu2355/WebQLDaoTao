@@ -67,6 +67,9 @@
                     </li>
                     <li><a href="QLNhapDiem.aspx">Quản lý điểm thi</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="logout.aspx"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+                </ul>
             </div>
         </nav>
 

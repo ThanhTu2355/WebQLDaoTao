@@ -8,17 +8,12 @@ using System.Web.UI.WebControls;
 
 namespace WebQLDaoTao
 {
-    public partial class Site : System.Web.UI.MasterPage
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnLogout_Click(object sender, EventArgs e)
-        {
+	public partial class logout : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
             FormsAuthentication.SignOut();
             Response.Redirect("login.aspx");
         }
-    }
-}
+	}
+} 

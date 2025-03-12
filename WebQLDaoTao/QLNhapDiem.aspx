@@ -7,7 +7,9 @@
     <h1>NHẬP ĐIỂM</h1>
     <div class="form-inline">
         Chọn môn
-        <asp:DropDownList ID="ddlKhoa" AutoPostBack="true" DataSourceID="odsMonHoc" DataTextField="TenMH" DataValueField="MaMH" runat="server"></asp:DropDownList>
+        <asp:DropDownList ID="ddlKhoa" AutoPostBack="true" DataSourceID="odsMonHoc"
+                          DataTextField="TenMH" DataValueField="MaMH" runat="server">
+        </asp:DropDownList>
     </div>
     <asp:GridView ID="gvDiem" runat="server" AutoGenerateColumns="False" DataSourceID="odsDiem"
         AllowPaging="true" PageSize="10" CssClass="table table-bordered table-hover"
@@ -20,7 +22,7 @@
                     <asp:TextBox ID="txtDiem" runat="server" Text='<%# Eval("Diem") %>'></asp:TextBox>
                 </ItemTemplate>
                 <FooterTemplate>
-                    <asp:Button ID="btnLuu" OnClick="btnLuu_Click" runat="server" Text="Lưu" />
+                    <asp:Button ID="btnLuu" CssClass="btn btn-success" OnClick="btnLuu_Click" runat="server" Text="Lưu" />
                 </FooterTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Chọn xóa">
@@ -31,7 +33,7 @@
                     <asp:CheckBox ID="chkChon" runat="server" />
                 </ItemTemplate>
                 <FooterTemplate>
-                    <asp:Button ID="btnXoa" OnClick="btnXoa_Click" runat="server" Text="Xóa" />
+                    <asp:Button ID="btnXoa" CssClass="btn btn-danger" OnClick="btnXoa_Click" runat="server" Text="Xóa" />
                 </FooterTemplate>
             </asp:TemplateField>
         </Columns>

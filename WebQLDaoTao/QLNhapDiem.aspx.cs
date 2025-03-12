@@ -27,6 +27,7 @@ namespace WebQLDaoTao
                 //cập nhật điểm
                 kqDAO.Update(id, diem);
             }
+            Response.Write("<script>alert('Lưu thành công!');</script>");
         }
 
         protected void btnXoa_Click(object sender, EventArgs e)
@@ -41,6 +42,7 @@ namespace WebQLDaoTao
                     kqDAO.Delete(id);
             }
             gvDiem.DataBind();
+            Response.Write("<script>alert('Xóa thành công!');</script>");
         }
 
         protected void chkAll_CheckedChanged(object sender, EventArgs e)
